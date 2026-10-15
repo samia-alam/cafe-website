@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our seasonal café menu featuring specialty espresso drinks, loose-leaf teas, fresh-baked French pastries, artisan sandwiches, and organic treats.">
+  <title>Menu | The Roasted Bean & Co.</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238C5332'><path d='M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z'/></svg>">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="./index.html" class="brand-logo" aria-label="The Roasted Bean Home">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/>
+        </svg>
+        <span>Roasted Bean</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main Navigation">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./menu.html" class="active">Menu</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="./contact.html" class="btn btn-primary">Find Our Café</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- Page Header Banner -->
+    <section class="page-header">
+      <div class="container">
+        <span class="section-tag">Fresh Daily Menu</span>
+        <h1>Handcrafted Food & Drinks</h1>
+        <p>Made with organic local ingredients, ethically roasted beans, and love in every single batch.</p>
+      </div>
+    </section>
+
+    <!-- Menu Filter & Grid Section -->
+    <section class="section-padding">
+      <div class="container">
+        
+        <!-- Category Filter Buttons -->
+        <div class="menu-filter-nav" role="tablist" aria-label="Menu categories">
+          <button class="filter-btn active" data-filter="all">All Items</button>
+          <button class="filter-btn" data-filter="coffee">Specialty Coffee</button>
+          <button class="filter-btn" data-filter="tea">Teas & Cold Drinks</button>
+          <button class="filter-btn" data-filter="bakery">Bakery & Breakfast</button>
+          <button class="filter-btn" data-filter="lunch">Lunch & Savory</button>
+          <button class="filter-btn" data-filter="dessert">Desserts</button>
+        </div>
+
+        <!-- Menu Items Grid -->
+        <div class="menu-items-grid">
+          
+          <!-- Item 1: Coffee -->
+          <div class="menu-card menu-item-card" data-category="coffee">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=300&q=80" alt="Velvet Honey Oat Latte" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Velvet Honey Oat Latte</h3>
+                <span class="menu-price">$4.75</span>
+              </div>
+              <p class="menu-desc">Espresso pulled over raw wildflower honey, steamed oat milk, and a dusting of Ceylon cinnamon.</p>
+              <div class="diet-tags">
+                <span class="diet-tag vegan">Plant-Based</span>
+                <span class="diet-tag special">Signature</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Coffee -->
+          <div class="menu-card menu-item-card" data-category="coffee">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=300&q=80" alt="Cortado in glass" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Artisan Cortado</h3>
+                <span class="menu-price">$4.25</span>
+              </div>
+              <p class="menu-desc">Equal parts rich double espresso and velvety textured whole milk in a 4.5oz Gibraltar glass.</p>
+              <div class="diet-tags">
+                <span class="diet-tag organic">Organic Dairy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Coffee -->
+          <div class="menu-card menu-item-card" data-category="coffee">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=300&q=80" alt="Slow cold brew coffee with ice" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">24-Hour Cold Brew</h3>
+                <span class="menu-price">$4.50</span>
+              </div>
+              <p class="menu-desc">Slowly steeped Colombian beans for 24 hours. Naturally sweet, low acidity, Served over clear artisan ice.</p>
+              <div class="diet-tags">
+                <span class="diet-tag vegan">Vegan</span>
+                <span class="diet-tag gf">Gluten-Free</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Tea -->
+          <div class="menu-card menu-item-card" data-category="tea">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=300&q=80" alt="Vibrant green iced matcha latte" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Kyoto Ceremonial Matcha</h3>
+                <span class="menu-price">$5.25</span>
+              </div>
+              <p class="menu-desc">First-harvest Uji matcha hand-whisked to order with almond or oat milk and mild agave.</p>
+              <div class="diet-tags">
+                <span class="diet-tag vegan">Vegan</span>
+                <span class="diet-tag organic">Antioxidant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Tea -->
+          <div class="menu-card menu-item-card" data-category="tea">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=300&q=80" alt="Hot herbal loose leaf tea" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Golden Turmeric Chai</h3>
+                <span class="menu-price">$4.75</span>
+              </div>
+              <p class="menu-desc">House-blended Assam black tea, organic turmeric, crushed cardamom, ginger, and cracked black pepper.</p>
+              <div class="diet-tags">
+                <span class="diet-tag special">House Blend</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Bakery -->
+          <div class="menu-card menu-item-card" data-category="bakery">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=300&q=80" alt="Golden baked croissant" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Classic Butter Croissant</h3>
+                <span class="menu-price">$3.50</span>
+              </div>
+              <p class="menu-desc">Made with cultured French butter and hundreds of paper-thin flaky layers. Fresh from our ovens every morning.</p>
+              <div class="diet-tags">
+                <span class="diet-tag special">Oven-Fresh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7: Bakery -->
+          <div class="menu-card menu-item-card" data-category="bakery">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80" alt="Cinnamon roll with cream cheese glaze" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Warm Brioche Cinnamon Roll</h3>
+                <span class="menu-price">$4.50</span>
+              </div>
+              <p class="menu-desc">Pillow-soft brioche dough swirled with dark brown sugar and Korintje cinnamon, topped with vanilla glaze.</p>
+              <div class="diet-tags">
+                <span class="diet-tag special">Favorite</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8: Lunch -->
+          <div class="menu-card menu-item-card" data-category="lunch">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80" alt="Avocado toast on sourdough" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Avocado Tartine</h3>
+                <span class="menu-price">$8.50</span>
+              </div>
+              <p class="menu-desc">Charred sourdough, smashed Hass avocado, heirloom cherry tomatoes, sheep's milk feta, and smoked sea salt.</p>
+              <div class="diet-tags">
+                <span class="diet-tag special">All-Day</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9: Lunch -->
+          <div class="menu-card menu-item-card" data-category="lunch">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=300&q=80" alt="Grilled panini sandwich" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Pesto Mozzarella Panini</h3>
+                <span class="menu-price">$9.75</span>
+              </div>
+              <p class="menu-desc">Fresh buffalo mozzarella, sun-ripened tomatoes, house basil pesto, and baby arugula pressed on ciabatta.</p>
+              <div class="diet-tags">
+                <span class="diet-tag special">Warm Pressed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10: Dessert -->
+          <div class="menu-card menu-item-card" data-category="dessert">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=300&q=80" alt="Basque burnt cheesecake slice" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Basque Burnt Cheesecake</h3>
+                <span class="menu-price">$6.25</span>
+              </div>
+              <p class="menu-desc">Caramelized crust with a rich, molten cream cheese center. Made in-house with bourbon vanilla bean.</p>
+              <div class="diet-tags">
+                <span class="diet-tag gf">Gluten-Free</span>
+                <span class="diet-tag special">Chef Special</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11: Dessert -->
+          <div class="menu-card menu-item-card" data-category="dessert">
+            <div class="menu-img">
+              <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=300&q=80" alt="Double chocolate sea salt cookie" loading="lazy">
+            </div>
+            <div class="menu-details">
+              <div class="menu-top">
+                <h3 class="menu-name">Dark Chocolate Sea Salt Cookie</h3>
+                <span class="menu-price">$3.25</span>
+              </div>
+              <p class="menu-desc">70% Valrhona dark chocolate chunks, browned butter, and Maldon flaky sea salt flakes.</p>
+              <div class="diet-tags">
+                <span class="diet-tag special">Fresh Batch</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dietary Note Banner -->
+        <div style="background-color: var(--color-sage-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 1.5rem; text-align: center; margin-top: 4rem;">
+          <h4 style="color: var(--color-sage-dark); margin-bottom: 0.4rem; font-size: 1.1rem;">Dietary Preferences & Customizations</h4>
+          <p style="color: var(--color-text-muted); font-size: 0.92rem; max-width: 650px; margin: 0 auto;">
+            We offer complimentary oat milk, almond milk, and decaf substitutions on all espresso drinks. Let our friendly baristas know if you have any allergies or specific dietary questions!
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" class="brand-logo">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/>
+            </svg>
+            <span>Roasted Bean</span>
+          </a>
+          <p class="footer-desc">
+            Your friendly neighborhood café. Single-origin roasts, scratch-made pastries, and warm smiles every single morning.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./menu.html">Full Menu</a>
+            <a href="./contact.html">Visit & Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Hours</h4>
+          <div class="footer-links">
+            <span>Monday - Friday:</span>
+            <strong style="color: #FFFFFF;">7:00 AM - 7:00 PM</strong>
+            <span style="margin-top: 0.5rem;">Saturday - Sunday:</span>
+            <strong style="color: #FFFFFF;">8:00 AM - 8:00 PM</strong>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Visit Us</h4>
+          <p style="font-size: 0.92rem; color: rgba(255, 255, 255, 0.75); line-height: 1.6; margin-bottom: 0.8rem;">
+            142 Blossom Hill Road<br>
+            Downtown Arts District<br>
+            Phone: (555) 382-7491
+          </p>
+          <a href="./contact.html" class="btn btn-sage" style="font-size: 0.85rem; padding: 0.5rem 1.2rem;">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          <span>&copy; <span id="currentYear">2026</span> The Roasted Bean & Co. All rights reserved.</span>
+          <span class="github-badge">Hosted on GitHub Pages</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

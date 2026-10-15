@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Roasted Bean Café - Artisanal coffee, fresh bakery items, and cozy study spaces. Handcrafted with passion.">
+  <title>The Roasted Bean & Co. | Artisanal Café & Bakery</title>
+  
+  <!-- Favicon placeholder (SVG coffee cup) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238C5332'><path d='M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z'/></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header & Navigation
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="./index.html" class="brand-logo" aria-label="The Roasted Bean Home">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/>
+        </svg>
+        <span>Roasted Bean</span>
+      </a>
+
+      <!-- Desktop & Mobile Nav Links -->
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main Navigation">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./menu.html">Menu</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="./menu.html" class="btn btn-primary">Order & View Menu</a>
+        <!-- Mobile Hamburger Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- ========================================================================
+         Hero Section with 10s Looping Background Video
+         ======================================================================== -->
+    <section class="hero-section" aria-label="Welcome Banner">
+      <div class="hero-video-wrapper">
+        <video 
+          id="heroVideo" 
+          class="hero-video" 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          poster="./assets/images/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="./assets/video/cafe-loop.webm" type="video/webm">
+          <source src="./assets/video/cafe-loop.mov" type="video/quicktime">
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span></span> Ethically Sourced • Freshly Brewed
+        </div>
+        <h1 class="hero-title">Crafted with Passion, Brewed for You.</h1>
+        <p class="hero-description">
+          Step into your neighborhood sanctuary. Sip artisanal pour-overs, indulge in morning pastries freshly baked at sunrise, or find your quiet study corner.
+        </p>
+        <div class="hero-actions">
+          <a href="./menu.html" class="btn btn-sage">Explore Our Menu</a>
+          <a href="./contact.html" class="btn btn-white">Find Our Café</a>
+        </div>
+      </div>
+
+      <!-- Play / Pause Video Accessibility Button -->
+      <button class="video-toggle-btn" id="videoToggleBtn" aria-label="Pause background video" title="Toggle background video">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+      </button>
+    </section>
+
+    <!-- ========================================================================
+         Ribbon Highlights
+         ======================================================================== -->
+    <section class="ribbon-section" aria-label="Café Highlights">
+      <div class="container">
+        <div class="ribbon-grid">
+          
+          <div class="ribbon-item">
+            <div class="ribbon-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="ribbon-text">
+              <h4>Roasted Daily</h4>
+              <p>Small-batch single origins</p>
+            </div>
+          </div>
+
+          <div class="ribbon-item">
+            <div class="ribbon-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18z"/>
+              </svg>
+            </div>
+            <div class="ribbon-text">
+              <h4>Fresh Bakery</h4>
+              <p>Oven-warm every morning</p>
+            </div>
+          </div>
+
+          <div class="ribbon-item">
+            <div class="ribbon-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+              </svg>
+            </div>
+            <div class="ribbon-text">
+              <h4>Free High-Speed Wi-Fi</h4>
+              <p>Student & work-friendly tables</p>
+            </div>
+          </div>
+
+          <div class="ribbon-item">
+            <div class="ribbon-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <div class="ribbon-text">
+              <h4>Pet Friendly Patio</h4>
+              <p>Warm outdoor seating</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Popular Favorites / Featured Menu
+         ======================================================================== -->
+    <section class="section-padding" aria-label="Customer Favorites">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Popular Picks</span>
+          <h2 class="section-title">Loved by Our Community</h2>
+          <p class="section-subtitle">
+            Handpicked crowd favorites crafted by our award-winning baristas and pastry chefs.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=640&q=80" alt="Velvet Honey Oat Latte in a ceramic mug" loading="lazy">
+              <span class="card-badge">Bestseller</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Velvet Oat Latte</h3>
+                <span class="card-price">$4.75</span>
+              </div>
+              <p class="card-desc">
+                Double shot of espresso, steamed creamy oat milk, infused with raw local wildflower honey and subtle cinnamon.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Plant Based</span>
+                <span class="tag">Hot or Iced</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=640&q=80" alt="Fresh golden flaky butter croissant" loading="lazy">
+              <span class="card-badge">Baked Daily</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Artisan Croissant</h3>
+                <span class="card-price">$3.50</span>
+              </div>
+              <p class="card-desc">
+                Traditional laminated French dough, baked fresh every morning with pure cultured butter for unmatched flaky layers.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Bakery</span>
+                <span class="tag">Warm-up Available</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=640&q=80" alt="Avocado sourdough toast topped with radishes and seeds" loading="lazy">
+              <span class="card-badge">Chef's Special</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Avocado Sourdough</h3>
+                <span class="card-price">$8.50</span>
+              </div>
+              <p class="card-desc">
+                Crushed Hass avocados on toasted country sourdough, topped with baby heirloom tomatoes, feta crumble, and chili flakes.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Vegetarian</span>
+                <span class="tag">All-Day Brunch</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="./menu.html" class="btn btn-secondary">View Full Menu & Pricing &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         About Teaser & Experience
+         ======================================================================== -->
+    <section class="section-padding" style="background-color: #FFFFFF; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="split-section">
+          
+          <div class="split-text">
+            <span class="section-tag">Our Philosophy</span>
+            <h2 class="section-title">More than just a cup of coffee.</h2>
+            <p style="margin-bottom: 1.25rem; color: var(--color-text-muted);">
+              Founded in 2021, The Roasted Bean began as an intimate haven for thinkers, students, and neighborhood neighbors. We believe in direct trade relationships with sustainable coffee farms worldwide.
+            </p>
+            <p style="margin-bottom: 2rem; color: var(--color-text-muted);">
+              Whether you need a serene nook with electrical outlets to finish your dissertation, or an uplifting meeting space with friends, our doors and patio are always warm.
+            </p>
+            <a href="./about.html" class="btn btn-primary">Read Our Story</a>
+          </div>
+
+          <div class="split-image-grid">
+            <div class="split-img">
+              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Cozy cafe seating area with plants" loading="lazy">
+            </div>
+            <div class="split-img">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Barista pouring coffee into mug" loading="lazy">
+            </div>
+            <div class="experience-badge">
+              <div class="number">100%</div>
+              <div class="text">Direct Trade<br>Organic Beans</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick Information Banner -->
+        <div class="info-banner">
+          <div class="banner-item">
+            <div class="banner-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="banner-info">
+              <h4>Opening Hours</h4>
+              <p>Mon - Fri: 7:00 AM - 7:00 PM<br>Sat - Sun: 8:00 AM - 8:00 PM</p>
+            </div>
+          </div>
+
+          <div class="banner-item">
+            <div class="banner-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="banner-info">
+              <h4>Location</h4>
+              <p>142 Blossom Hill Road<br>Downtown Arts District</p>
+            </div>
+          </div>
+
+          <div class="banner-item">
+            <div class="banner-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <div class="banner-info">
+              <h4>Call & Inquiries</h4>
+              <p>+1 (555) 382-7491<br>hello@roastedbean.com</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       Global Footer
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <a href="./index.html" class="brand-logo">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/>
+            </svg>
+            <span>Roasted Bean</span>
+          </a>
+          <p class="footer-desc">
+            Your friendly neighborhood café. Single-origin roasts, scratch-made pastries, and warm smiles every single morning.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.688 5H18V0h-3.808C10.597 0 9 1.583 9 4.615V8z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./menu.html">Full Menu</a>
+            <a href="./contact.html">Visit & Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Hours</h4>
+          <div class="footer-links">
+            <span>Monday - Friday:</span>
+            <strong style="color: #FFFFFF;">7:00 AM - 7:00 PM</strong>
+            <span style="margin-top: 0.5rem;">Saturday - Sunday:</span>
+            <strong style="color: #FFFFFF;">8:00 AM - 8:00 PM</strong>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Visit Us</h4>
+          <p style="font-size: 0.92rem; color: rgba(255, 255, 255, 0.75); line-height: 1.6; margin-bottom: 0.8rem;">
+            142 Blossom Hill Road<br>
+            Downtown Arts District<br>
+            Phone: (555) 382-7491
+          </p>
+          <a href="./contact.html" class="btn btn-sage" style="font-size: 0.85rem; padding: 0.5rem 1.2rem;">Get Directions</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          <span>&copy; <span id="currentYear">2026</span> The Roasted Bean & Co. All rights reserved.</span>
+          <span class="github-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Hosted on GitHub Pages
+          </span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

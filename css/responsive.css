@@ -1,0 +1,191 @@
+/* ==========================================================================
+   The Roasted Bean Café - Responsive Stylesheet
+   Breakpoints: Mobile (< 768px), Tablet (768px - 1024px)
+   ========================================================================== */
+
+/* Tablet & Smaller (< 1024px) */
+@media screen and (max-width: 1024px) {
+  .ribbon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .split-image-grid {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .info-banner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile Devices (< 768px) */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem 2rem;
+    gap: 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 10px 25px var(--color-shadow-lg);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-base), opacity var(--transition-base);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #F0EAE1;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-cta .btn {
+    display: none; /* Keep nav clean on mobile */
+  }
+
+  .hero-section {
+    min-height: 85vh;
+    padding: 4rem 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .video-toggle-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .ribbon-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .story-values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .menu-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card {
+    flex-direction: column;
+  }
+
+  .menu-img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom p {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-info-card,
+  .contact-form-wrapper {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+/* Accessibility: User Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-video {
+    display: none;
+  }
+
+  .hero-video-wrapper {
+    background: url('../assets/images/hero-poster.jpg') center/cover no-repeat;
+  }
+}
